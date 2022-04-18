@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Zomato!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Zomatologo.jpg" alt="" width="90" height="45">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="assignment.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                </ul>
+            </a>
+        </div>
+        <div class="in">
+            <button type="button" class="btn btn-link" data-bs-toggle="modal"
+                data-bs-target="#loginModal">Login</button>
+        </div>
+        <div>
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#signupModal">Create an
+                Account</button>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <main class="form-signin">
+                            <form>
+
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com" required>
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                        placeholder="Password" required>
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                                <p class="mt-5 mb-3 text-muted">© 2018–2021</p>
+                            </form>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- signUp Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign Up Page</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                                    required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                                    required>
+                            </div>
+                        </div>
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Email / Mobile No.</label>
+                                <input type="email" class="form-control" id="inputEmail4" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="inputPassword4" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"
+                                    required>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Address 2</label>
+                                <input type="text" class="form-control" id="inputAddress2"
+                                    placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control" id="inputCity" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">State</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputZip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="inputZip" required>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide  carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="bg.png" class="d-block w-100" alt="..." width="1400px" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Find the best resturant,cafes, and bars</h5>
+
+                    <form class="d-flex">
+
+                        <select name="location">
+                            <option value="0" selected disabled>Location</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="banglor">Banglor</option>
+                            <option value="bhuvneshwar">Bhuvneshwar</option>
+                            <option value="goa">Goa</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="bhopal">Bhopal</option>
+                            <option value="jabalpur">Jabalpur</option>
+                            <option value="rewa">Rewa</option>
+                            <option value="indore">Indore</option>
+                            <option value="satna">Satna</option>
+                            <option value="gwalior">Gwalior</option>
+                            <option value="kolkata">Kolkata</option>
+                            <option value="ahemdabad">Ahemdabad</option>
+                            <option value="surat">Surat</option>
+                            <option value="pune">Pune</option>
+                            <option value="rajkot">Rajkot</option>
+                        </select>
+                        <label for="resturant"></label>
+                        <select name="resturant">
+                            <option value="0" selected disabled>Search Resturant</option>
+                            <option value="sagar gaire">Sagar gaire</option>
+                            <option value="naveen's fast food">Naveen's fast food</option>
+                            <option value="bapu ki kutiya">Bapu ki kutiya</option>
+                            <option value="vishnu fast food">Vishnu fast food</option>
+                            <option value="punjab baker's">Punjab baker's</option>
+                            <option value="park street cafe">Park street cafe</option>
+                            <option value="e-square">E-square</option>
+                            <option value="guru fast food">Guru fast food</option>
+                            <option value="frozen hut baker's">Frozen hut baker's</option>
+                            <option value="dimsum house">Dimsum house</option>
+                            <option value="prerna resturant">Prerna resturant</option>
+                            <option value="food junction family resturant">Food junction family
+                                resturant</option>
+                            <option value="chauhan nashta ghar">Chauhan nashta ghar</option>
+                            <option value="the momo fast food">The momo fast food</option>
+                            <option value="winter rose cafe">Winter rose cafe</option>
+                            <option value="the last cup resturant and tiffin services">The last cup resturant and tiffin
+                                services</option>
+                            <option value="appi's kitchen">Appi's kitchen</option>
+                        </select>
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="bg.01.jpg" class="d-block w-100" alt="..." width="1400px" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Find the best resturant,cafes, and bars</h5>
+
+                    <form class="d-flex">
+
+                        <select name="location">
+                            <option value="0" selected disabled>Location</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="banglor">Banglor</option>
+                            <option value="bhuvneshwar">Bhuvneshwar</option>
+                            <option value="goa">Goa</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="bhopal">Bhopal</option>
+                            <option value="jabalpur">Jabalpur</option>
+                            <option value="rewa">Rewa</option>
+                            <option value="indore">Indore</option>
+                            <option value="satna">Satna</option>
+                            <option value="gwalior">Gwalior</option>
+                            <option value="kolkata">Kolkata</option>
+                            <option value="ahemdabad">Ahemdabad</option>
+                            <option value="surat">Surat</option>
+                            <option value="pune">Pune</option>
+                            <option value="rajkot">Rajkot</option>
+                        </select>
+                        <label for="resturant"></label>
+                        <select name="resturant">
+                            <option value="0" selected disabled>Search Resturant</option>
+                            <option value="sagar gaire">Sagar gaire</option>
+                            <option value="naveen's fast food">Naveen's fast food</option>
+                            <option value="bapu ki kutiya">Bapu ki kutiya</option>
+                            <option value="vishnu fast food">Vishnu fast food</option>
+                            <option value="punjab baker's">Punjab baker's</option>
+                            <option value="park street cafe">Park street cafe</option>
+                            <option value="e-square">E-square</option>
+                            <option value="guru fast food">Guru fast food</option>
+                            <option value="frozen hut baker's">Frozen hut baker's</option>
+                            <option value="dimsum house">Dimsum house</option>
+                            <option value="prerna resturant">Prerna resturant</option>
+                            <option value="food junction family resturant">Food junction family
+                                resturant</option>
+                            <option value="chauhan nashta ghar">Chauhan nashta ghar</option>
+                            <option value="the momo fast food">The momo fast food</option>
+                            <option value="winter rose cafe">Winter rose cafe</option>
+                            <option value="the last cup resturant and tiffin services">The last cup resturant and tiffin
+                                services</option>
+                            <option value="appi's kitchen">Appi's kitchen</option>
+                        </select>
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="food.03.jpg" class="d-block w-100" alt="..." width="1400px" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Find the best resturant,cafes, and bars</h5>
+
+                    <form class="d-flex">
+
+                        <select name="location">
+                            <option value="0" selected disabled>Location</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="banglor">Banglor</option>
+                            <option value="bhuvneshwar">Bhuvneshwar</option>
+                            <option value="goa">Goa</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="bhopal">Bhopal</option>
+                            <option value="jabalpur">Jabalpur</option>
+                            <option value="rewa">Rewa</option>
+                            <option value="indore">Indore</option>
+                            <option value="satna">Satna</option>
+                            <option value="gwalior">Gwalior</option>
+                            <option value="kolkata">Kolkata</option>
+                            <option value="ahemdabad">Ahemdabad</option>
+                            <option value="surat">Surat</option>
+                            <option value="pune">Pune</option>
+                            <option value="rajkot">Rajkot</option>
+                        </select>
+                        <label for="resturant"></label>
+                        <select name="resturant">
+                            <option value="0" selected disabled>Search Resturant</option>
+                            <option value="sagar gaire">Sagar gaire</option>
+                            <option value="naveen's fast food">Naveen's fast food</option>
+                            <option value="bapu ki kutiya">Bapu ki kutiya</option>
+                            <option value="vishnu fast food">Vishnu fast food</option>
+                            <option value="punjab baker's">Punjab baker's</option>
+                            <option value="park street cafe">Park street cafe</option>
+                            <option value="e-square">E-square</option>
+                            <option value="guru fast food">Guru fast food</option>
+                            <option value="frozen hut baker's">Frozen hut baker's</option>
+                            <option value="dimsum house">Dimsum house</option>
+                            <option value="prerna resturant">Prerna resturant</option>
+                            <option value="food junction family resturant">Food junction family
+                                resturant</option>
+                            <option value="chauhan nashta ghar">Chauhan nashta ghar</option>
+                            <option value="the momo fast food">The momo fast food</option>
+                            <option value="winter rose cafe">Winter rose cafe</option>
+                            <option value="the last cup resturant and tiffin services">The last cup restaurant and tiffin
+                                services</option>
+                            <option value="appi's kitchen">Appi's kitchen</option>
+                        </select>
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="content1">
+        <div class="row mb-2">
+            <div class="col-md-4">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Breakfast</strong>
+                        <p class="mb-auto">Start your day with exclusive breakfast options</p>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="https://www.zomato.com/bhopal/arabian-eats-peer-gate-area/order"><img src="momos.jpg"
+                                alt="" width="180px" height="180px"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Lunch</strong>
+                        <p class="mb-auto">Start your day with exclusive breakfast options</p>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="https://www.zomato.com/bhopal/lunchbox-meals-and-thalis-maharana-pratap-nagar"><img
+                                src="lunch.png" alt="" width="180px" height="180px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Snacks</strong>
+                        <p class="mb-auto">Start your day with exclusive breakfast options</p>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a
+                            href="https://www.zomato.com/bhopal/shri-mahakal-namkeen-bhojnalay-gulmohar-colony/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gU2Ftb3NhIiwiZGlzaF9pZHMiOlsiYjBjMzliMmI2MTVhMjUwYzhlYmY5YTRhMGQzMjM2ODZfMiJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D"><img
+                                src="snacks.png" alt="" width="180px" height="180px"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content ">
+        <div class="row mb-2">
+            <div class="col-md-4">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Dinner</strong>
+                        <p class="mb-auto">Start your day with exclusive breakfast options</p>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a
+                            href="https://www.zomato.com/bhopal/anjani-veg-bhojnalaya-hoshangabad-road/info?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gVGhhbGkiLCJkaXNoX2lkcyI6WyIzNjFmNTk3NTllZjNlZTljNzE5ODJiODVkYWRmYWYyMF8yIl0sImN1aXNpbmVfaWRzIjpbXX19"><img
+                                src="dinner.png" alt="" width="180px" height="180px"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Drinks</strong>
+                        <p class="mb-auto">Start your day with exclusive breakfast options</p>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a
+                            href="https://www.zomato.com/bhopal/sharma-and-vishnu-fast-food-lalghati-kohefiza/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gRHJpbmsiLCJkaXNoX2lkcyI6WyIwYjE4YTNkN2I5YzQzZmYxNzUwZDJiYWE0NjA2YjhkMF8yIl0sImN1aXNpbmVfaWRzIjpbXX19"><img
+                                src="drinks.png" alt="" width="180px" height="180px"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Nightlife</strong>
+                        <p class="mb-auto">Start your day with exclusive breakfast options</p>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="https://www.zomato.com/bhopal/drinx-exchange-maharana-pratap-nagar"><img
+                                src="nightout.png" alt="" width="180px" height="180px"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="mt-auto text-black-50">
+        <div class="ft">
+            <p>Cover template for <a href="https://zomato.com/" class="text-primary-50">Zomato</a> by <a
+                    href="https://www.instagram.com/choubey__jii_/" class="text-primary">@Choubey_jii</a>.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
